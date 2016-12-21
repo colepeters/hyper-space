@@ -1,28 +1,46 @@
-module.exports.onWindow = browserWindow => browserWindow.setVibrancy('ultra-dark');
-
 module.exports.decorateConfig = config => {
+  const colors = {
+    background: '#212026',
+    foreground: '#b2b2b2',
+    black: '#1f2022',
+    red: '#ce537a',
+    green: '#2d9574',
+    yellow: '#b1951d',
+    blue: '#4083cd',
+    magenta: '#c81e78',
+    cyan: '#2aa1ae',
+    white: '#d3d3d3',
+    lightBlack: '#555f69',
+    lightRed: '#df005f',
+    lightGreen: '#3ac095',
+    lightYellow: '#875f00',
+    lightBlue: '#3e7ec1',
+    lightMagenta: '#af00df',
+    lightCyan: '#34c8d9',
+    lightWhite: '#efefef'
+  }
   return Object.assign({}, config, {
-    foregroundColor: '#b2b2b2',
-    backgroundColor: 'rgba(41,43,46,0.666)',
-    borderColor: 'rgba(0,0,0,0)',
-    cursorColor: 'rgba(248,28,229,0.75)',
+    foregroundColor: colors.foreground,
+    backgroundColor: colors.background,
+    borderColor: 'transparent',
+    cursorColor: 'rgba(200,30,120,0.666)',
     colors: {
-      black: '#1f2022',
-      red: '#ce537a',
-      green: '#2d9574',
-      yellow: '#b1951d',
-      blue: '#4083cd',
-      magenta: '#a31db1',
-      cyan: '#2d9574',
-      white: '#d3d3d3',
-      lightBlack: '#555f69',
-      lightRed: '#df005f',
-      lightGreen: '#67b11d',
-      lightYellow: '#875f00',
-      lightBlue: '#3e7ec1',
-      lightMagenta: '#af00df',
-      lightCyan: '#2aa198',
-      lightWhite: '#efefef'
+      black: colors.black,
+      red: colors.red,
+      green: colors.green,
+      yellow: colors.yellow,
+      blue: colors.blue,
+      magenta: colors.magenta,
+      cyan: colors.cyan,
+      white: colors.white,
+      lightBlack: colors.lightBlack,
+      lightRed: colors.lightRed,
+      lightGreen: colors.lightGreen,
+      lightYellow: colors.lightYellow,
+      lightBlue: colors.lightBlue,
+      lightMagenta: colors.lightMagenta,
+      lightCyan: colors.lightCyan,
+      lightWhite: colors.lightWhite
     },
     css: `
       ${config.css || ''}
@@ -31,10 +49,15 @@ module.exports.decorateConfig = config => {
       }
       .tab_tab {
         border: 0;
+        opacity: 0.5;
       }
-      .tab_tab.tab_active {
-        border-bottom: 1px solid rgba(248,28,229,0.75);
+      .tab_active {
+        opacity: 1;
+      }
+      .tab_textActive {
+        opacity: 1;
+        border-bottom: 1px solid ${colors.cyan}
       }
     `
-  });
-};
+  })
+}
