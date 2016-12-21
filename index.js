@@ -7,7 +7,7 @@ module.exports.decorateConfig = config => {
     green: '#2d9574',
     yellow: '#b1951d',
     blue: '#4083cd',
-    magenta: '#c81e78',
+    magenta: '#a31db1',
     cyan: '#2aa1ae',
     white: '#d3d3d3',
     lightBlack: '#555f69',
@@ -56,7 +56,7 @@ module.exports.decorateConfig = config => {
       }
       .tab_textActive {
         opacity: 1;
-        border-bottom: 1px solid ${colors.cyan}
+        border-bottom: 1px solid ${colors.magenta}
       }
     `
   })
