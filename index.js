@@ -23,7 +23,7 @@ module.exports.decorateConfig = config => {
     foregroundColor: colors.foreground,
     backgroundColor: colors.background,
     borderColor: 'transparent',
-    cursorColor: 'rgba(200,30,120,0.666)',
+    cursorColor: 'rgb(200,30,120)',
     colors: {
       black: colors.black,
       red: colors.red,
