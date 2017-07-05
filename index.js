@@ -56,7 +56,17 @@ module.exports.decorateConfig = config => {
       }
       .tab_textActive {
         opacity: 1;
-        border-bottom: 1px solid ${colors.magenta}
+        border-bottom: 1px solid ${colors.magenta};
+      }
+      .splitpane_divider {
+        background-color: ${colors.lightBlack} !important;
+      }
+      .splitpane_pane > .term_fit {
+        opacity: 0.666;
+        transition: 0.15s ease-in-out;
+      }
+      .splitpane_pane > .term_fit.term_active {
+        opacity: 1;
       }
     `
   })
