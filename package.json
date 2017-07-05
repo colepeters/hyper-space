@@ -1,6 +1,6 @@
 {
   "name": "hyper-space",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Colour scheme for Hyper (hyper.is) based on Spacemacs",
   "main": "index.js",
   "scripts": {
